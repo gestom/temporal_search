@@ -314,7 +314,6 @@ int CFrelement::load(FILE* file)
 		outlierSet = (unsigned int*)malloc(outliers*(sizeof(unsigned int)));
 		ret+=fread(frelements,sizeof(SFrelement),order,file);
 		ret+=fread(outlierSet,sizeof(unsigned int),outliers,file);
-		printf("READ: %i\n",ret);
 		if (ret != 4+outliers+order) ret = -1; else ret = 0;
 	}
 	return ret;

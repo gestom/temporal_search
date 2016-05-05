@@ -2,7 +2,7 @@
 
 using namespace std;
 
-bool debug = true;
+bool debug = false;
 TEMPORAL element[NUM_ELEMENTS];
 
 const char *locationStr[] = {

@@ -10,6 +10,10 @@
 #define MAX_SIGNAL_LENGTH 10000000
 #define NUM_ELEMENTS 10 
 
+#ifndef TEMPORAL
+#define TEMPORAL CFrelement
+#endif 
+
 
 using namespace std;
 

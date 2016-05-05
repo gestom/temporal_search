@@ -385,6 +385,7 @@ int CFregement::load(FILE* file)
 		ret+=fread(outlierSet,sizeof(unsigned int),outliers,file);
 		if (ret != 4+outliers+order) ret = -1; else ret = 0;
 	}
+	print();
 	return ret;
 }
 

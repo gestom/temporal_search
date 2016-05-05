@@ -26,23 +26,23 @@ imr::Graph graph;
 
 SPlan establishPlan(float probabilities[])
 {
-  SPlan plan;
-  imr::Graph::Probabilities probs;
-  for(unsigned int i=0;i<graph.nodes.size();i++) {
-    probs.push_back(probabilities[i]);
-  }    
-  graph.setProbabilities(probs);
-  imr::Graph::PathSolution solution = graph.getPath();
-  std::cout << "Best path (exp. time = " << solution.expectedTime << "): " << std::endl;
-  graph.displayPath(solution.path,solution.pathTimes,true);
-  
-  plan.length = solution.path.size();
-  for(unsigned int i=0;i<plan.length;i++) {
-    plan.placeSequence[i] = solution.path[i];
-    plan.timeSequence[i] = solution.pathTimes[i];
-  }
-  
-  return plan;
+	SPlan plan;
+	imr::Graph::Probabilities probs;
+	for(unsigned int i=0;i<graph.nodes.size();i++) {
+		probs.push_back(probabilities[i]);
+	}    
+	graph.setProbabilities(probs);
+	imr::Graph::PathSolution solution = graph.getPath();
+	std::cout << "Best path (exp. time = " << solution.expectedTime << "): "; 
+	graph.displayPath(solution.path,solution.pathTimes,true);
+
+	plan.length = solution.path.size();
+	for(unsigned int i=0;i<plan.length;i++) {
+		plan.placeSequence[i] = solution.path[i];
+		plan.timeSequence[i] = solution.pathTimes[i];
+	}
+
+	return plan;
 }
 
 /*checks when the robot actually arrives at the correct location*/
@@ -166,9 +166,10 @@ int constructTest(const char* name,int signalLengtha)
 	fclose(file);
 	
 	CFregement frege;
-	CFFTPlan *bla;
+	CFFTPlan *bla = NULL;
 	frege.build(timeline,signalLength,bla);
 	//frege.print();
+	return 0;
 }
 
 int main(int argc,char *argv[])

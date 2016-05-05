@@ -113,10 +113,10 @@ int NodeBetter::node;
   void Node::sortNodes() {
     NodeBetter::node = id;
     std::sort(allNodes.begin(), allNodes.end(), NodeBetter());
-    FOR_EACH(n,allNodes) {
-      std::cout << NodeBetter::graph.dist[id][*n] << " ";
-    }
-    std::cout << std::endl;
+//    FOR_EACH(n,allNodes) {
+//	std::cout << NodeBetter::graph.dist[id][*n] << " ";
+//    }
+//    std::cout << std::endl;
   }
 
 
@@ -445,7 +445,7 @@ Graph::PathSolution Graph::getPath() {
     numPossibleNodes = nodes.size();
   }
 
-  std::cout << "numPossibleNodes "  << numPossibleNodes << std::endl;
+  //std::cout << "numPossibleNodes "  << numPossibleNodes << std::endl;
   path.clear();
   pathTimes.clear();
 //   int start = nodeMap["Corridor"];
@@ -453,7 +453,6 @@ Graph::PathSolution Graph::getPath() {
   path.push_back(start);
   pathTimes.push_back(0);
   nodes[start].processed = true;
-  printf("START %i\n",start);
   pathLength = 0;
   pathCost = 0;
   pathSize = 1;
