@@ -59,4 +59,4 @@ Once the `establishAruba.sh` finishes, you can generate a latex-style table and 
 
 ###References
 
-1. 6. T.Krajnik, M.Kulich, L.Mudrova, R.Ambrus, T.Duckett: <b>[Where is waldo at time t? using spatio-temporal models for mobile robot search.](http://raw.githubusercontent.com/wiki/gestom/fremen/papers/fremen_2015_ICRA_search.pdf)</b> In proceedings of the IEEE International Conference on Robotics and Automation (ICRA), 2015. [[bibtex](http://raw.githubusercontent.com/wiki/gestom/fremen/papers/fremen_2015_ICRA_search.bib)]
+1. T.Krajnik, M.Kulich, L.Mudrova, R.Ambrus, T.Duckett: <b>[Where is waldo at time t? using spatio-temporal models for mobile robot search.](http://raw.githubusercontent.com/wiki/gestom/fremen/papers/fremen_2015_ICRA_search.pdf)</b> In proceedings of the IEEE International Conference on Robotics and Automation (ICRA), 2015. [[bibtex](http://raw.githubusercontent.com/wiki/gestom/fremen/papers/fremen_2015_ICRA_search.bib)]
