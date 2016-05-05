@@ -15,7 +15,8 @@ The project uses standard libraries and we provide relevant Makefiles to compile
 Simply go to the <i>search2</i> folder and call <i>make'</i>. 
 If successful, the graph-search library  <b>libsearch.a</b> and a testing util <b>search2</b> should appear in the current folder. You can try to test the search lirbary simply by calling <i>./search2</i>. If successful, you should see a the search plan description, which should look like:
 
-{Symbolic: [18] Center->Master_Bedroom (15) ->Center (30) ->Living_Room (43) ->Kitchen (57) ->Center (71) ->Corridor (92) ->Second_Bedroom (117) ->Corridor (142) ->Office (166) ->Corridor (190) ->Center (211) ->Master_Bedroom (226) ->Master_Bathroom (245) ->Master_Bedroom (264) ->Center (279) ->Corridor (300) ->Second_Bathroom (326) }
+Best path (exp. time = 41.1147): 
+Symbolic: [18] Center->Master_Bedroom (15) ->Center (30) ->Living_Room (43) ->Kitchen (57) ->Center (71) ->Corridor (92) ->Second_Bedroom (117) ->Corridor (142) ->Office (166) ->Corridor (190) ->Center (211) ->Master_Bedroom (226) ->Master_Bathroom (245) ->Master_Bedroom (264) ->Center (279) ->Corridor (300) ->Second_Bathroom (326) 
 
 ###References
 
