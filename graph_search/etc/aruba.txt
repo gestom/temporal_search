@@ -1,0 +1,18 @@
+node Master_Bedroom
+node Master_Bathroom
+node Living_Room
+node Kitchen
+node Center
+node Corridor
+node Second_Bedroom
+node Office
+node Second_Bathroom
+link Kitchen        Living_Room       14
+link Center         Living_Room       13
+link Center         Kitchen           14
+link Center         Master_Bedroom    15
+link Master_Bedroom Master_Bathroom   19
+link Center         Corridor          21
+link Corridor       Office            24
+link Corridor       Second_Bathroom   26
+link Corridor       Second_Bedroom    25 
