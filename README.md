@@ -4,7 +4,7 @@ This repository contains algorightms and data that we used for our work on robot
 
 The software provided consists of two packages: 
 1. The <i>graph search library</i>, which implements the algorithm described in Section 5 of [[1](#references)].
-2. The  <i>temporal modeling and evaluation utilities</i>, which performs the actual experiments.
+2. The<i>temporal modeling and evaluation utilities</i>, which performs the actual experiments.
 
 ## How to compile and run it
 
@@ -13,7 +13,7 @@ The project uses standard libraries and we provide relevant Makefiles to compile
 ### Graph search library
 
 Simply `cd search2` to the search2 folder and call `make`. 
-If successful, the graph-search library  <b>libsearch.a</b> and a testing util <b>search</b> should appear in the current folder. You can try to test the search lirbary simply by calling <i>./search2</i>. If successful, you should see a the search plan description, which should look like:
+If successful, the graph-search library  <b>libsearch.a</b> and a testing utility <b>search</b> should appear in the current folder. You can try to test the search library simply by calling `./search2`. If successful, you should see the search plan description, which should look like this:
 
 ```
 Best path (exp. time = 41.1147):
@@ -37,7 +37,7 @@ Now, to quickly evaluate the search method, call
 The arguments are following:
 
 1.<b>establish</b> means that you are doing actual benchmarking
-1.<b>../etc/weeks_4_order_1.fre</b> is the temporal model - FreMEn order 1 learnev over 4 weeks of data.
+1.<b>../etc/weeks_4_order_1.fre</b> is the temporal model - FreMEn order 1 learned over 4 weeks of data.
 1.<b>../etc/presence.txt</b> is the person location second-by-second. 
 1.<b>2419200</b> is the starting time of testing (the last second of the fourth week, i.e. 4x7x24x3600).
 1.<b>3024000</b> is the end time of testing (the last second of the fifth week, i.e. (5x7x24x3600).
@@ -45,7 +45,7 @@ The arguments are following:
 
 For each evaluation, you should see the expected time of search, the search path and the duration of the actual search. The benchmark also prints the mean time it took to find an object if it was in the environment (found time) and the mean time of the entire search (rescue time). 
 
-### Evaluating results
+## Evaluating results
 
 If it works OK, then you can try to reproduce the Aruba dataset experiments by running
 
@@ -53,10 +53,8 @@ If it works OK, then you can try to reproduce the Aruba dataset experiments by r
 
 which runs the search with <i>static</i>,<i>FreMEn</i> and <i>GMM</i> models and stores results in the <i>fremen-aruba</i> folder. Note, that each model evaluation takes approximatelly a minute, because it consists of 60x24x7x16 = ~160 000 searches. Since `establishAruba.sh` evaluates 7 models, the entire run can take a while.
 
-Once the `establishAruba.sh` finishes, you can generate a latex-style table and five-point statistics by calling 
+Once the `establishAruba.sh` finishes, you can quickly see the mean time of the search and five-point search time summary by calling `processResults.sh`.
 
-``processResults.sh``
-
-###References
+##References
 
 1. T.Krajnik, M.Kulich, L.Mudrova, R.Ambrus, T.Duckett: <b>[Where is waldo at time t? using spatio-temporal models for mobile robot search.](http://raw.githubusercontent.com/wiki/gestom/fremen/papers/fremen_2015_ICRA_search.pdf)</b> In proceedings of the IEEE International Conference on Robotics and Automation (ICRA), 2015. [[bibtex](http://raw.githubusercontent.com/wiki/gestom/fremen/papers/fremen_2015_ICRA_search.bib)]
