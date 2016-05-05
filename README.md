@@ -6,11 +6,11 @@ The software provided consists of two packages:
 1. The <i>graph search library</i>, which implements the algorithm described in Section 5 of [[1](#references)].
 2. The<i>temporal modeling and evaluation utilities</i>, which performs the actual experiments.
 
-## How to compile and run it
+### How to compile and run it
 
 The project uses standard libraries and we provide relevant Makefiles to compile it.
 
-### Graph search library
+#### Graph search library
 
 Simply `cd search2` to the search2 folder and call `make`. 
 If successful, the graph-search library  <b>libsearch.a</b> and a testing utility <b>search</b> should appear in the current folder. You can try to test the search library simply by calling `./search2`. If successful, you should see the search plan description, which should look like this:
@@ -27,7 +27,7 @@ You can use the <i>dot</i> utility to create a pdf drawing of the topological ma
 
 Thus, you can verify if the topology of the environment (stored in our case in the <i>search2/etc/aruba.txt</i> file) was interpreted correctly.
 
-### Temporal models and main benchmark
+#### Temporal models and main benchmark
 
 Go to the <i>fremen/src</i> folder and call <i>make</i> again. This should create a binary in the <i>fremen/bin</i> folder.
 Now, to quickly evaluate the search method, call
@@ -45,7 +45,7 @@ The arguments are following:
 
 For each evaluation, you should see the expected time of search, the search path and the duration of the actual search. The benchmark also prints the mean time it took to find an object if it was in the environment (found time) and the mean time of the entire search (rescue time). 
 
-## Evaluating results
+### Evaluating results
 
 If it works OK, then you can try to reproduce the Aruba dataset experiments by running
 
@@ -55,6 +55,12 @@ which runs the search with <i>static</i>,<i>FreMEn</i> and <i>GMM</i> models and
 
 Once the `establishAruba.sh` finishes, you can quickly see the mean time of the search and five-point search time summary by calling `processResults.sh`.
 
-##References
+### Conditions of use 
+
+If you use the softrware for your research, please cite our paper [[1](#references)] that describes the temporal search method.
+Since the dataset used is based on the [CASAS](http://ailab.wsu.edu/casas/) datasets, you should also cite the article [[2](#references)].
+
+### References
 
 1. T.Krajnik, M.Kulich, L.Mudrova, R.Ambrus, T.Duckett: <b>[Where is waldo at time t? using spatio-temporal models for mobile robot search.](http://raw.githubusercontent.com/wiki/gestom/fremen/papers/fremen_2015_ICRA_search.pdf)</b> In proceedings of the IEEE International Conference on Robotics and Automation (ICRA), 2015. [[bibtex](http://raw.githubusercontent.com/wiki/gestom/fremen/papers/fremen_2015_ICRA_search.bib)]
+1. D.J. Cook: <b>[Learning setting-generalized activity models for smart spaces.](http://eecs.wsu.edu/~cook/pubs/is10.pdf)</b> IEEE Intelligent Systems, 2012. [[bibtex](http://dblp.uni-trier.de/rec/bibtex/journals/expert/Cook12)]
